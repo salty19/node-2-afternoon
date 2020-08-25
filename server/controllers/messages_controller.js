@@ -3,7 +3,7 @@ let id = 0
 
 module.exports = {
     create: (req, res) => {
-       const {date, time} = req.body
+       const {text, time} = req.body
        
        const newMessages = {
            text,
@@ -23,8 +23,18 @@ module.exports = {
     },
 
     update: (req, res) => {
-        const {id} = req.params
-        
+        const {text} = req.body
+        const updateId = req.params.id
+        const messageIndex = messages.findIndex(message => message.id == updateID)
+        let message = messages[messageIndex]
+
+        messages[messageIndex] = {
+            id: message.id,
+            text: text || message.text,
+            time: message.time
+        }
+
+        res.status(200).send(messages)
     },
 
     delete: (req, res) => {
