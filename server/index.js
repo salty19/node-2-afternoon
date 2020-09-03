@@ -1,5 +1,5 @@
 const express = require('express')
-const messagesController = require('./controllers/messages_controller')
+const mc = require('./controllers/messages_controller')
 
 const app = express()
 const port = 3001
