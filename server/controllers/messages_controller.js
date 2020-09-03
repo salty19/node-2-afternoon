@@ -5,7 +5,7 @@ module.exports = {
     
     create: (req, res) => {
        const {text, time} = req.body
-       const newMessages = {it, text, time}
+       const newMessages = {id, text, time}
 
        messages.push(newMessages)
 
