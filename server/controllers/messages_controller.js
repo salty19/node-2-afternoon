@@ -5,12 +5,7 @@ module.exports = {
     
     create: (req, res) => {
        const {text, time} = req.body
-       
-       const newMessages = {
-           text,
-           time,
-           id,
-       }
+       const newMessages = {it, text, time}
 
        messages.push(newMessages)
 
